@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts: Poppins (body) + Josefin Sans (headings) - optimized loading */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap') layer(fonts);
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Improve text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Light theme - clean white background with Leo District colors */
+  --bg: 255 255 255;      /* white background */
+  --fg: 20 18 18;         /* dark text */
+  --heading: 113 15 56;   /* burgundy #710F38 */
+  --link: 196 29 102;     /* crimson #C41D66 */
+  --g1: 236 105 162;      /* rose #EC69A2 */
+  --g2: 225 173 54;       /* gold #E1AD36 */
+}
+
+.dark {
+  /* Dark theme swaps to deep burgundy base with light text */
+  --bg: 24 8 16;          /* deep burgundy base */
+  --fg: 247 234 193;      /* sand #F7EAC1 as light text */
+  --heading: 247 177 200; /* petal #F7B1C8 for headings */
+  --link: 236 105 162;    /* rose #EC69A2 */
+  --g1: 234 8 128;        /* fuchsia #EA0880 */
+  --g2: 225 173 54;       /* gold #E1AD36 */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: rgb(var(--fg));
+  background-color: rgb(var(--bg));
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(var(--g1), 0.12), transparent 50%),
+    radial-gradient(1200px 600px at 90% 110%, rgba(var(--g2), 0.10), transparent 50%);
+}
+
+/* Headings and links adapt to theme variables */
+ h1, h2, h3, h4, h5, h6 { color: rgb(var(--heading)); }
+ a { color: rgb(var(--link)); text-underline-offset: 3px; }
+ a:hover { color: rgb(var(--heading)); }
+
+/* Surface + button tokens */
+:root {
+  --surface: 255 255 255;        /* light card surface */
+  --surface-border: 0 0 0;       /* border color base */
+  --btn-bg: 196 29 102;          /* crimson */
+  --btn-bg-hover: 113 15 56;     /* burgundy */
+  --btn2-bg: 225 173 54;         /* gold */
+  --btn2-hover: 178 114 42;      /* bronze */
+  --maroon: 113 15 56;           /* maroon/burgundy */
+  --gold: 225 173 54;            /* gold */
+}
+.dark {
+  --surface: 0 0 0;              /* dark card surface */
+  --surface-border: 255 255 255; 
+  --btn-bg: 236 105 162;         /* rose */
+  --btn-bg-hover: 234 8 128;     /* fuchsia */
+  --btn2-bg: 178 114 42;         /* bronze */
+  --btn2-hover: 225 173 54;      /* gold */
+  --maroon: 113 15 56;           /* maroon/burgundy */
+  --gold: 225 173 54;            /* gold */
+}
+
+/* Enhanced surface for cards/boxes */
+.surface-card {
+  @apply backdrop-blur-lg rounded-xl transition-all duration-300;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.surface-card * {
+  color: inherit;
+}
+
+.dark .surface-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark .surface-card * {
+  color: inherit;
+}
+
+.surface-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.dark .surface-card:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons */
+.btn-primary { background: rgb(var(--btn-bg)); color: #fff; }
+.btn-primary:hover { background: rgb(var(--btn-bg-hover)); }
+
+.btn-secondary { background: rgb(var(--btn2-bg)); color: #111; }
+.dark .btn-secondary { color: #fff; }
+.btn-secondary:hover { background: rgb(var(--btn2-hover)); }
+
+/* Enhanced Liquid/Frosted glass utility */
+.glass {
+  @apply backdrop-blur-md;
+  /* Solid white glass in light mode for maximum readability */
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.12);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.dark .glass {
+  /* Keep translucent in dark mode */
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Brand color utilities */
+.text-gold { color: rgb(var(--gold)); }
+.bg-gold { background-color: rgb(var(--gold)); }
+.text-maroon { color: rgb(var(--maroon)); }
+.bg-maroon { background-color: rgb(var(--maroon)); }
+.bg-maroon-700 { background-color: #5a0c2d; }
+.border-gold { border-color: rgb(var(--gold)); }
+
+.heading-serif {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Simple page transition fade */
+.page-enter {
+  opacity: 0.01;
+}
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-out;
+}
+
+/* Smooth marquee animation for logo carousel */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+/* Cross-browser horizontal mask fade (supports Safari with -webkit-mask-image) */
+.mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(225, 173, 54, 0.6), rgba(196, 29, 102, 0.6));
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(225, 173, 54, 0.8), rgba(196, 29, 102, 0.8));
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(247, 177, 200, 0.6), rgba(236, 105, 162, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(247, 177, 200, 0.8), rgba(236, 105, 162, 0.8));
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(225, 173, 54, 0.6) rgba(255, 255, 255, 0.1);
+}
+
+.dark * {
+  scrollbar-color: rgba(247, 177, 200, 0.6) rgba(0, 0, 0, 0.2);
+}
+
+/* Biography content styling */
+
+.biography-content {
+  /* Black text for light mode with white background */
+  color: rgb(17 24 39); /* gray-900 */
+}
+
+.dark .biography-content {
+  /* White text for dark mode */
+  color: rgb(255 255 255);
+}
+
+.biography-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.biography-content p:last-child {
+  margin-bottom: 0;
+}
+
+.biography-content strong {
+  font-weight: 600;
+  color: rgb(var(--heading));
+}
+
+.biography-content a {
+  color: rgb(var(--link));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.biography-content a:hover {
+  color: rgb(var(--heading));
+}
+
+.biography-content ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  color: inherit;
+}
+
+.biography-content ul ul {
+  list-style-type: circle;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.biography-content li {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.biography-content li.text-gray-800 {
+  color: inherit;
+}
+
+.biography-content li.dark\:text-gray-200 {
+  color: inherit;
+}
+
+.biography-content h3,
+.biography-content h4 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: rgb(17 24 39); /* gray-900 for light mode */
+}
+
+.dark .biography-content h3,
+.dark .biography-content h4 {
+  color: rgb(255 255 255); /* white for dark mode */
+}
+
+.biography-content h3 {
+  font-size: 1.125rem;
+}
+
+.biography-content h4 {
+  font-size: 1rem;
+}
