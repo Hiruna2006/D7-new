@@ -1,0 +1,45 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signedIn() { return request.auth != null; }
+    function userPath() { return /databases/(default)/documents/users/$(request.auth.uid); }
+    function role() {
+      return signedIn() && firestore.exists(userPath())
+        ? firestore.get(userPath()).data.role
+        : 'member';
+    }
+    function isAdmin() { return role() == 'admin' || role() == 'superadmin'; }
+    function isTrainer() { return isAdmin() || role() == 'trainer'; }
+    function safeImage() {
+      return request.resource.size < 10 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    match /website/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && safeImage();
+    }
+
+    match /lms/{allPaths=**} {
+      allow read: if signedIn();
+      allow write: if isTrainer() && request.resource.size < 25 * 1024 * 1024;
+    }
+
+    match /users/{uid}/{allPaths=**} {
+      allow read: if signedIn();
+      allow write: if signedIn() && request.auth.uid == uid && safeImage();
+    }
+
+    match /merch_receipts/{allPaths=**} {
+      allow read, write: if false; // Server/Admin SDK only.
+    }
+
+    match /private/{allPaths=**} {
+      allow read, write: if false;
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

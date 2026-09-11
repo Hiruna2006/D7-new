@@ -1,0 +1,8 @@
+[
+  { "href": "/admin/projects", "label": "Manage Projects", "description": "Create, update, and curate district project stories with rich galleries." },
+  { "href": "/admin/lms", "label": "Manage Training Modules", "description": "Build structured learning journeys with modules, quizzes, and requirements." },
+  { "href": "/admin/all-rounders", "label": "Manage All-Rounders", "description": "Celebrate outstanding Leos with monthly highlights and photo galleries." },
+  { "href": "/admin/ascent", "label": "Manage Ascent Newsletter", "description": "Embed and feature the latest digital newsletter issues from Heyzine." },
+  { "href": "/admin/merch", "label": "Manage Merch Orders", "description": "View and export district t-shirt orders, verify payment slips, and manage inventory." },
+  { "href": "/admin/kpi", "label": "KPI Management (Dist. President)", "description": "Review officer self-evaluations, determine final assessment scores, and track performance bands." }
+]

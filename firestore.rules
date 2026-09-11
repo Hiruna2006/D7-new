@@ -1,0 +1,84 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function userPath() { return /databases/$(database)/documents/users/$(request.auth.uid); }
+    function role() { return signedIn() && exists(userPath()) ? get(userPath()).data.role : 'member'; }
+    function isAdmin() { return signedIn() && (role() == 'admin' || role() == 'superadmin'); }
+    function isTrainer() { return signedIn() && (role() == 'trainer' || isAdmin()); }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid) && request.resource.data.role == 'member';
+      allow update: if isAdmin() || (isOwner(uid) && request.resource.data.role == resource.data.role);
+      allow delete: if isAdmin();
+    }
+
+    match /mylci/{id} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    match /siteContent/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /projects/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /newsletters/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /allRoundersHighlights/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /courses/{document=**} {
+      allow read: if signedIn();
+      allow write: if isTrainer();
+    }
+
+    match /kpiProfiles/{uid} {
+      allow read, create, update: if isOwner(uid) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    match /evaluations/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create, update: if isOwner(uid);
+      allow delete: if isAdmin();
+    }
+
+    match /merch_orders/{document=**} {
+      allow read: if isAdmin();
+      allow write: if false; // Orders are created by the trusted Next.js API via Admin SDK.
+    }
+
+    match /attempts/{document=**} {
+      allow read: if isAdmin() || isTrainer();
+      allow write: if false;
+    }
+
+    match /events/{document=**} {
+      allow create: if signedIn();
+      allow read: if isAdmin();
+      allow update, delete: if false;
+    }
+
+    match /otps/{document=**} {
+      allow read, write: if false; // Server/Admin SDK only.
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

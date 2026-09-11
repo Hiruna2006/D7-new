@@ -1,0 +1,18 @@
+[
+  {
+    "id": "black-shirt",
+    "name": "District Official T-Shirt (Black)",
+    "price": 2000,
+    "color": "Black",
+    "image": "/images/merch/black.jpeg",
+    "description": "Official black edition t-shirt of Leo District 306 D7. Premium breathable fabric, designed for leadership and impact."
+  },
+  {
+    "id": "white-shirt",
+    "name": "District Official T-Shirt (White)",
+    "price": 2000,
+    "color": "White",
+    "image": "/images/merch/white.jpeg",
+    "description": "Official white edition t-shirt of Leo District 306 D7. Professional look for district events. High-comfort material."
+  }
+]

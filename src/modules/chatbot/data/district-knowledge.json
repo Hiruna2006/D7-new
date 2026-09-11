@@ -1,0 +1,17 @@
+{
+  "district": {
+    "name": "Leo District 306 D7",
+    "coverage": ["Colombo District", "Ratnapura District"],
+    "clubs": 37,
+    "members": "over 2,000",
+    "parent": "Lions Clubs International Multiple District 306 – Sri Lanka",
+    "website": "d7leos.org",
+    "email": "leodistrict306d7@gmail.com",
+    "phone": "+94 77 624 3300"
+  },
+  "values": {
+    "moto": "Leadership, Experience, and Opportunity",
+    "theme": "Forge the Future",
+    "mission": "Fostering leadership through service by empowering youth, building communities, and creating impact"
+  }
+}

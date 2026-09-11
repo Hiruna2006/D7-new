@@ -1,0 +1,52 @@
+/* Universal D7 design tokens. Change these values to retheme the whole platform. */
+:root {
+  --brand-petal: 247 177 200;
+  --brand-rose: 236 105 162;
+  --brand-fuchsia: 234 8 128;
+  --brand-crimson: 196 29 102;
+  --brand-burgundy: 113 15 56;
+  --brand-burgundy-dark: 90 12 45;
+  --brand-sand: 247 234 193;
+  --brand-gold: 225 173 54;
+  --brand-bronze: 178 114 42;
+  --brand-deep-red: 170 13 36;
+  --brand-deep-crimson: 144 11 31;
+  --campaign-bg: 10 5 5;
+  --campaign-surface: 26 10 14;
+
+  --bg: 255 255 255;
+  --fg: 20 18 18;
+  --heading: var(--brand-burgundy);
+  --link: var(--brand-crimson);
+  --g1: var(--brand-rose);
+  --g2: var(--brand-gold);
+  --surface: 255 255 255;
+  --surface-border: 0 0 0;
+  --btn-bg: var(--brand-crimson);
+  --btn-bg-hover: var(--brand-burgundy);
+  --btn2-bg: var(--brand-gold);
+  --btn2-hover: var(--brand-bronze);
+  --maroon: var(--brand-burgundy);
+  --gold: var(--brand-gold);
+
+  --radius-card: 1rem;
+  --radius-panel: 1.5rem;
+  --radius-button: .75rem;
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+}
+
+.dark {
+  --bg: 24 8 16;
+  --fg: var(--brand-sand);
+  --heading: var(--brand-petal);
+  --link: var(--brand-rose);
+  --g1: var(--brand-fuchsia);
+  --g2: var(--brand-gold);
+  --surface: 0 0 0;
+  --surface-border: 255 255 255;
+  --btn-bg: var(--brand-rose);
+  --btn-bg-hover: var(--brand-fuchsia);
+  --btn2-bg: var(--brand-bronze);
+  --btn2-hover: var(--brand-gold);
+}

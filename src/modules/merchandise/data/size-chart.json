@@ -1,0 +1,56 @@
+[
+  {
+    "size": "2XS",
+    "chest": "16.5\"",
+    "length": "24.5\"",
+    "collar": "13.5\""
+  },
+  {
+    "size": "XS",
+    "chest": "17.5\"",
+    "length": "25.5\"",
+    "collar": "14\""
+  },
+  {
+    "size": "S",
+    "chest": "18.5\"",
+    "length": "26.5\"",
+    "collar": "14.5\""
+  },
+  {
+    "size": "M",
+    "chest": "19.5\"",
+    "length": "27.5\"",
+    "collar": "15\""
+  },
+  {
+    "size": "L",
+    "chest": "20.5\"",
+    "length": "28.5\"",
+    "collar": "15.5\""
+  },
+  {
+    "size": "XL",
+    "chest": "21.5\"",
+    "length": "29.5\"",
+    "collar": "16\""
+  },
+  {
+    "size": "2XL",
+    "chest": "22.5\"",
+    "length": "30.5\"",
+    "collar": "16.5\""
+  },
+  {
+    "size": "3XL",
+    "chest": "23.5\"",
+    "length": "31.5\"",
+    "collar": "17\""
+  },
+  {
+    "size": "4XL",
+    "chest": "24.5\"",
+    "length": "32.5\"",
+    "collar": "17.5\""
+  }
+]

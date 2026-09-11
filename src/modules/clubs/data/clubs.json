@@ -1,0 +1,254 @@
+[
+  {
+    "id": "leo-club-of-ananda-college",
+    "name": "Leo Club of Ananda College",
+    "type": "alpha",
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "leo-club-of-anula-vidyalaya",
+    "name": "Leo Club of Anula Vidyalaya",
+    "type": "alpha",
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "leo-club-of-ashoka-vidyalaya",
+    "name": "Leo Club of Ashoka Vidyalaya",
+    "type": "alpha",
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "leo-club-of-bomiriya-central-college",
+    "name": "Leo Club of Bomiriya Central College",
+    "type": "alpha",
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "leo-club-of-carey-college",
+    "name": "Leo Club of Carey College",
+    "type": "alpha",
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "leo-club-of-asian-grammar-school",
+    "name": "Leo Club of Asian Grammar School",
+    "type": "alpha",
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "leo-club-of-gankanda-central-college",
+    "name": "Leo Club of Gankanda Central College",
+    "type": "alpha",
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "leo-club-of-isipathana-college",
+    "name": "Leo Club of Isipathana College",
+    "type": "alpha",
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "leo-club-of-lumbini-college",
+    "name": "Leo Club of Lumbini College",
+    "type": "alpha",
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "leo-club-of-mahanama-college",
+    "name": "Leo Club of Mahanama College",
+    "type": "alpha",
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "leo-club-of-mahinda-rajapaksha-college",
+    "name": "Leo Club of Mahinda Rajapaksha College",
+    "type": "alpha",
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "leo-club-of-ferguson-high-school",
+    "name": "Leo Club of Ferguson High School",
+    "type": "alpha",
+    "active": true,
+    "order": 12
+  },
+  {
+    "id": "leo-club-of-pannipitiya-dharmapala-vidyalaya",
+    "name": "Leo Club of Pannipitiya Dharmapala Vidyalaya",
+    "type": "alpha",
+    "active": true,
+    "order": 13
+  },
+  {
+    "id": "leo-club-of-president-s-college-maharagama",
+    "name": "Leo Club of President's College Maharagama",
+    "type": "alpha",
+    "active": true,
+    "order": 14
+  },
+  {
+    "id": "leo-club-of-royal-college",
+    "name": "Leo Club of Royal College",
+    "type": "alpha",
+    "active": true,
+    "order": 15
+  },
+  {
+    "id": "leo-club-of-sivali-college",
+    "name": "Leo Club of Sivali College",
+    "type": "alpha",
+    "active": true,
+    "order": 16
+  },
+  {
+    "id": "leo-club-of-st-aloysius-college",
+    "name": "Leo Club of St. Aloysius' College",
+    "type": "alpha",
+    "active": true,
+    "order": 17
+  },
+  {
+    "id": "leo-club-of-st-john-s-college",
+    "name": "Leo Club of St. John's College",
+    "type": "alpha",
+    "active": true,
+    "order": 18
+  },
+  {
+    "id": "leo-club-of-thurstan-college",
+    "name": "Leo Club of Thurstan College",
+    "type": "alpha",
+    "active": true,
+    "order": 19
+  },
+  {
+    "id": "leo-club-of-gothami-balika",
+    "name": "Leo Club of Gothami Balika",
+    "type": "alpha",
+    "active": true,
+    "order": 20
+  },
+  {
+    "id": "leo-club-of-cinnamon-gardens",
+    "name": "Leo Club of Cinnamon Gardens",
+    "type": "omega",
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "leo-club-of-colombo-eminence",
+    "name": "Leo Club of Colombo Eminence",
+    "type": "omega",
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "leo-club-of-colombo-griffins",
+    "name": "Leo Club of Colombo Griffins",
+    "type": "omega",
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "leo-club-of-colombo-hogwarts",
+    "name": "Leo Club of Colombo Hogwarts",
+    "type": "omega",
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "leo-club-of-colombo-knights",
+    "name": "Leo Club of Colombo Knights",
+    "type": "omega",
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "leo-club-of-defence-marshals",
+    "name": "Leo Club of Defence Marshals",
+    "type": "omega",
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "leo-club-of-homagama-central",
+    "name": "Leo Club of Homagama Central",
+    "type": "omega",
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "leo-club-of-kottawa-central-golden-city",
+    "name": "Leo Club of Kottawa Central Golden City",
+    "type": "omega",
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "leo-club-of-kuruwita-paradise",
+    "name": "Leo Club of Kuruwita Paradise",
+    "type": "omega",
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "leo-club-of-maharagama-golden-city",
+    "name": "Leo Club of Maharagama Golden City",
+    "type": "omega",
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "leo-club-of-nawala-metro",
+    "name": "Leo Club of Nawala Metro",
+    "type": "omega",
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "leo-club-of-national-institute-of-business-management",
+    "name": "Leo Club of National Institute of Business Management",
+    "type": "omega",
+    "active": true,
+    "order": 12
+  },
+  {
+    "id": "leo-club-of-pannipitiya-metro-titans",
+    "name": "Leo Club of Pannipitiya Metro Titans",
+    "type": "omega",
+    "active": true,
+    "order": 13
+  },
+  {
+    "id": "leo-club-of-pannipitiya-paradise",
+    "name": "Leo Club of Pannipitiya Paradise",
+    "type": "omega",
+    "active": true,
+    "order": 14
+  },
+  {
+    "id": "leo-club-of-sabaragamuwa-university",
+    "name": "Leo Club of Sabaragamuwa University",
+    "type": "omega",
+    "active": true,
+    "order": 15
+  },
+  {
+    "id": "leo-club-of-university-of-sri-jayewardenepura",
+    "name": "Leo Club of University of Sri Jayewardenepura",
+    "type": "omega",
+    "active": true,
+    "order": 16
+  }
+]

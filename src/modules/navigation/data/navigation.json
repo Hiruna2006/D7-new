@@ -1,0 +1,9 @@
+[
+  { "href": "/about", "label": "About", "type": "internal" },
+  { "href": "/council", "label": "Council", "type": "internal" },
+  { "href": "/projects", "label": "Projects", "type": "internal" },
+  { "href": "lms", "label": "LMS", "type": "lms" },
+  { "href": "/all-rounders", "label": "D7 All-Rounders", "type": "internal" },
+  { "href": "/ascent", "label": "Ascent", "type": "internal" },
+  { "href": "/merch", "label": "Merch", "type": "internal" }
+]
